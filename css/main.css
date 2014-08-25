@@ -131,8 +131,9 @@ footer {
 #gallery li {
 	float: left;
 	width: 45%;
+	max-height: 204px;
 	margin:2.5%;
-	background-color: #f5f5f5;
+	background-color: #FE0E14;
 	color:#bdc3c7;
 	
 }
