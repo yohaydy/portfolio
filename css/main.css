@@ -2,23 +2,44 @@
 /*************************************
 			HEADING
 **************************************/
-body {
+body {margin-bottom: -50px;
 	font-family: 'Open Sans', sans-serif;
-	background-color: #eee;
-	color: #999;
+	color: #585858;
+	background-image: url(../img/background2.png);
+	min-height: 100%;
+	background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(38,38,37,0) 33%, rgba(109,108,107,0.93) 95%, rgba(109,108,107,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(33%,rgba(38,38,37,0)), color-stop(95%,rgba(109,108,107,0.93)), color-stop(100%,rgba(109,108,107,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(38,38,37,0) 33%,rgba(109,108,107,0.93) 95%,rgba(109,108,107,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(38,38,37,0) 33%,rgba(109,108,107,0.93) 95%,rgba(109,108,107,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(38,38,37,0) 33%,rgba(109,108,107,0.93) 95%,rgba(109,108,107,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(38,38,37,0) 33%,rgba(109,108,107,0.93) 95%,rgba(109,108,107,1) 100%); /* W3C */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(59%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))), url(../img/background2.png) ;
+}
+
+/*Next lines is for sticky footer
+*/
+html {
+    position: relative;
+    min-height: 100%;
+
+}
+
+
+#gradient {
+	min-height: 100%;
+	z-index: 10000;
 }
 
 #wrapper{
-	
 	max-width:940px;
-	margin: 0 auto;
 	padding: 0 5%;
-	padding-top:100px;
-	z-index: 1;
+	padding-bottom:60px;
+	padding-top: 100px;
+	margin: 0 auto;
 }
 
 a{text-decoration: none;
-  color:#6ab47b;}
+  color:#fff;}
 
  img {
  	max-width: 100%;
@@ -29,27 +50,32 @@ a{text-decoration: none;
 #logo{
 	text-align: center;
 	margin:0;
+	margin-top:12px;
+
 }
 
-header {
-	position: fixed;
-	margin:0 0 30px 0;
-	padding:5px 0 0 0 ;
 
-	border-color:#fff;
+
+.header {
+	margin-top: 40px;
+	position: absolute;
+	margin:0;
+	height:55px;
 	width:100%;
 	z-index: 100;
-	background-image: url(../img/pentagon.png)
+	border-bottom:5px solid #555;
+	box-shadow: 0px 0px 20px rgba(0,0,0,0.4);
+	background-color: rgba(255,255,255,0.2);
 }
 
 h1, h2 {
-	color: #fff;
+	color:#555;
 }
 
 h1 { 
 	font-family: 'Changa One', sans-serif;
-	margin: 15px 0;
-	font-size:1.75em;
+	margin: 5px 0 15px 0;
+	font-size:1.25em;
 	font-weight: normal;
 	line-height: 0.8em;
 }
@@ -63,17 +89,16 @@ h2 {
 h3 {
 	margin:0 0 1em  0;
 }
+
+
 /*************************************
 			NAVIGATION
 **************************************/
 nav {
-	color: #fff;
 	text-align: center;
 	padding:10px 0;
-	margin:20px 0 0;
+	margin:11px 0 0;
 	background:#599a68;
-	font-weight: 800;
-	
 }
 
 nav ul {
@@ -83,33 +108,35 @@ nav ul {
 }
 nav li {
 	display: inline-block;
-	padding:0px 10px;
-	cursor: pointer;
-}
-
-nav a {
 	font-weight: 800;
-	padding:15px 10px;
+	padding:5px 15px;
+	cursor: pointer;
+	-webkit-transition: all 0.5s
 }
 
-nav a, nav a:visited {
-	color:#fff;
+nav li:hover {
+	background-color: #fff;
 }
 
-.active {
-	color:#32673f;
+nav li.active {
+	border-bottom: 5px solid #fff;
 }
+
 
 /*************************************
 			FOOTER
 **************************************/
 
-footer {
+.footer {
 	clear: both;
 	font-size:0.75em;
 	text-align: center;
 	padding-top:50px;
 	color:#ccc;
+	position:absolute;
+	 margin-left: 7%;
+	min-width: 90%;
+   bottom:0;
 }
 
 .social-icon {
@@ -129,6 +156,7 @@ footer {
 }
 
 #gallery li {
+	overflow: hidden;
 	float: left;
 	width: 45%;
 	max-height: 204px;
@@ -188,4 +216,3 @@ background-image:url('../img/mail.png');
 .contact-info li.twitter a{
 background-image:url('../img/twitter.png');
 }
-
