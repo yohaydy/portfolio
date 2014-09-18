@@ -16,6 +16,11 @@ background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(38,38,37,0) 33%,rg
 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(59%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))), url(../img/background2.png) ;
 }
 
+p {
+	text-shadow:0px 1px 1px  #eee;
+	line-height: 200%;
+}
+
 /*Next lines is for sticky footer
 */
 html {
@@ -39,7 +44,9 @@ html {
 }
 
 a{text-decoration: none;
-  color:#fff;}
+  color:#fff;
+	
+}
 
  img {
  	max-width: 100%;
@@ -139,6 +146,10 @@ nav li.active {
    bottom:0;
 }
 
+.footer p {
+	text-shadow:none;
+}
+
 .social-icon {
 	width:20px;
 	height:20px;
@@ -157,20 +168,23 @@ nav li.active {
 
 #gallery li {
 	overflow: hidden;
+	position: relative;
 	float: left;
-	width: 45%;
-	max-height: 204px;
+	width: 42%;
+	max-height: 179px;
 	margin:2.5%;
-	background-color: #FE0E14;
-	color:#bdc3c7;
-	
+	background-color: #fff;
+	color:#fff;
+	padding: 1%;
+	box-shadow:10px 10px 0px #555;
+	border-radius:3px;
+}
+#gallery li a img {
+	border-radius:3px;
 }
 
-#gallery li a p {
-	margin:0;
-	padding:5%;
-	font-size: 0.75em;
-	color: #444;
+#gallery li:last-child {
+    margin-bottom:120px;
 }
 
 /*************************************

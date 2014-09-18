@@ -3,7 +3,6 @@ function loadContent(){
 	$("#section").load( "/portfolio.html" );
 }
 
-
 	$("#portfolio").on("click", function(){
 		$("#section").load( "/portfolio.html" );
 		$(this).addClass('active').siblings().removeClass('active');
@@ -18,3 +17,25 @@ function loadContent(){
 })
 
 loadContent();
+
+window.onload = function() {
+
+ $("a.grouped_elements").fancybox();
+	
+	/* Using custom settings */
+	
+	$("a#inline").fancybox({
+		'hideOnContentClick': true
+	});
+
+	/* Apply fancybox to multiple items */
+	
+	$("a.group").fancybox({
+		'transitionIn'	:	'elastic',
+		'transitionOut'	:	'elastic',
+		'speedIn'		:	600, 
+		'speedOut'		:	200, 
+		'overlayShow'	:	false
+	});
+
+};
